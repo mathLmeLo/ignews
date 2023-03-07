@@ -1,38 +1,33 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## NEXT JS
 
-## Getting Started
+É um framework para React.
 
-First, run the development server:
+Ele adiciona uma camada a mais entre o Browser e o Servidor, sendo um servidor Node.js ele entrega as paginas para o browser atuando como um SSR(Server side Rendering).
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+Ele tenta resolver um dos problemas de construir SPAs que rodam direto no Browser: a indexação no google(buscadores e motores de adds etc). Essas ferramentas, muitas vezes buscam puramento dentro do HTML servido numa página, o que faz com que páginas de ecommerces, por exemplo deixem a desejar na performence de resultados de busca.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Como o Next.js entrega a página pronta para o broser, com todo o conteúdo já formado, sem a dinamicidade de chamadas a API que buscam conteudo externo e etc. Isso acaba por resolver esse problema da indexação.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+### Notas
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+- Cada arquivo criado dentro da rota `pages` ou `src/pages` vira uma rota para a aplicação. Com excessão ao `_app.js` e o `_document.js`. Isso é chamado de fileSystem routing.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### Criar o projeto com o comando:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- `yarn create next-app ignews`
 
-## Learn More
+### Adicionar typescript
 
-To learn more about Next.js, take a look at the following resources:
+- `yarn add typescript @types/react @types/node -D`
+Após modificar os arquivos para `.tsx` o next identifica a alteração no próximo `yarn dev` e cria o arquivo de configuração `tsconfig.json` e o arquivo de definição de tipos `next-env.d.ts`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Estilização no Nextjs
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+O nextjs permite realizar o 'scoped css' de forma nativa, de forma que nomear um aquivo css como `nome.module.css` vai fazer com que esse css seja aplicada apenas para um módulo em específico.
 
-## Deploy on Vercel
+Essa estratégia se chama 'css modules' e é possivel instalar uam extenão no vs code para facilitar o uso.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+As estilizações dentro desses arquivos não podem ser genéricas a ponto de abranger uma tag, e devem se referir a uma classe.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Instalar o SASS
+- `yarn add sass`
