@@ -11,6 +11,8 @@ Como o Next.js entrega a página pronta para o broser, com todo o conteúdo já 
 ### Notas
 
 - Cada arquivo criado dentro da rota `pages` ou `src/pages` vira uma rota para a aplicação. Com excessão ao `_app.js` e o `_document.js`. Isso é chamado de fileSystem routing.
+- O arquivo `_app.tsx` é um componente que sempre vai ficar por volta de todas as páginas, então se a intenção for aplicar algo em todas as páginas, se coloca nesse arquivo, Esse arquivo é recarregado sempre que o usuário troca de página então se algo como as fontes precisarem ser carregadas somente uma única vez no app, se utiliza outro arquivo, i `_document.tsx`
+- Assim, o `_document.tsx` funciona de maneira semelhante ao `_app.tsx`, mas ele é carregado somente uma única vez na aplicação. Ele pode ser comparado com o `index.html` em um project React comum
 
 ### Criar o projeto com o comando:
 
