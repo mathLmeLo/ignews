@@ -17,6 +17,8 @@ Como o Next.js entrega a página pronta para o broser, com todo o conteúdo já 
 - O after em `&.active::after` funciona colocando um elemento logo em seguida do conteúdo da tag, mas dentro da tag.
 - O `& + a` aplica uma regra css para toda ancora que nao seja a primeira, ou seja, que tiver uma outra antes dela.
 - Adicionar o border-radius do mesmo tamanho que o height faz com que fique o mais arredondado possivel: `height: 3rem; border-radius: 3rem;`
+- `height: calc(100vh - 5rem);` Faz com que a altura seja a altura de toda a tela *menos* 5 rem, que é a altura do cabeçalho
+- `> span`: span diretamente dentro da tag, apenas um nível de profundidade
 
 ### Criar o projeto com o comando:
 
