@@ -59,3 +59,18 @@ Assim, no next ficamos com tres possibilidades de como fazer uma chamada a uma A
 - Client side(no browser)
 - Server side
 - Static site generation
+
+### API ROUTES
+Um backend básico pode ser criado integrado a aplicação NextJS.
+Dentro da pasta `/pages/api` qualquer arquivo criado se transforma automaticamente em uma rota para esse backend.
+
+Essas API Routes são implementadas o conceito de Serverless.
+Quando há uma chamada a esse mini backend, um ambiente é criado, executa a req e depois morre.
+
+
+### Métodos de autenticação disponíveis no NextJS
+Para a grande maioria dos casos não existe melhor método de sutenticação do que simplesmente gerar um token JWT, salvar ele em um localstorage ou cookies, recuperar esse token, colocar uma data de expiração, e ir trabalhando com o refreshToken.
+
+- JWT salvo no storage
+- Next Auth, utilizado quando utilizar um login "social", com um terceito, como github, google, facebook... Utiliza apenas as API routes
+-  Cognito da AWS, Auth0 (authentication as a service)
