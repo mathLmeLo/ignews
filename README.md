@@ -50,3 +50,12 @@ Esse método, o *getServerSideProps* é executado na camada do servidor Node, e 
 
 ### SSG - Static Site Generation
 Uma vez que construiu a página completa usando o React, o NextJS salva uma versão estática desse HTML, de forma que os próximos clientes que solicitarem a página receberão essa versão estática e não vai ser necessário criar toda a página novamente.
+Para utilizar essa funcionalidade no next, deve-se usar o *getStaticProps* como em:
+`export const getStaticProps: GetServerSideProps = async () {}`
+A propriedade *revalidate* retornada por essa função indica quanto tempo em segundos essa página estática sera'servida, antes de criar uma nova versão, revalidada.
+Essa funcionalidade só pode ser utilizada em páginas que podem ser estáticas, nas quais o conteúdo é o mesmo, independentemente de quem acesse a aplicação.
+
+Assim, no next ficamos com tres possibilidades de como fazer uma chamada a uma API:
+- Client side(no browser)
+- Server side
+- Static site generation
