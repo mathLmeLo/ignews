@@ -39,3 +39,14 @@ As estilizações dentro desses arquivos não podem ser genéricas a ponto de ab
 
 ### Instalar o SASS
 - `yarn add sass`
+
+### Chamadas a API no SSR(Server side rendering)
+Normalmente no React se usaria um useEffect para realizar a chamada a uma api que com sua resposta faria com que o browser execute a chamada e o componente fosse re-renderizado. 
+Com o next a página já vem pronto do lado do servidor, então essas chamadas não acontecem dessa forma.
+Se eu precisar de alguma informação "server side" dentro de um componente, é necessário repassar essa info de um *página* para o *componente*.
+A página deve exportar uma função do tipo:
+`export const getServerSideProps: GetServerSideProps = async () {}`
+Esse método, o *getServerSideProps* é executado na camada do servidor Node, e não do browser, então, por exemplo, colocar um console.log() nele não aparece no console do browser, somente no do servidor.
+
+### SSG - Static Site Generation
+Uma vez que construiu a página completa usando o React, o NextJS salva uma versão estática desse HTML, de forma que os próximos clientes que solicitarem a página receberão essa versão estática e não vai ser necessário criar toda a página novamente.
