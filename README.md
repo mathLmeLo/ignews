@@ -74,3 +74,8 @@ Para a grande maioria dos casos não existe melhor método de sutenticação do 
 - JWT salvo no storage
 - Next Auth, utilizado quando utilizar um login "social", com um terceito, como github, google, facebook... Utiliza apenas as API routes
 -  Cognito da AWS, Auth0 (authentication as a service)
+
+### FaunaDB
+Facilita a criação de apps serverless por nao precisar manter uma conexao ativa com o banco de dados.
+
+`yarn add faunadb`
