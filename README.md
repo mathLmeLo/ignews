@@ -19,6 +19,10 @@ Como o Next.js entrega a página pronta para o broser, com todo o conteúdo já 
 - Adicionar o border-radius do mesmo tamanho que o height faz com que fique o mais arredondado possivel: `height: 3rem; border-radius: 3rem;`
 - `height: calc(100vh - 5rem);` Faz com que a altura seja a altura de toda a tela *menos* 5 rem, que é a altura do cabeçalho
 - `> span`: span diretamente dentro da tag, apenas um nível de profundidade
+- Com o Next existem tres formas de se executar uma função fora do browser, ou seja, com mais segurança e sem expor variáveis sensíveis:
+  - getServerSideProps (SSR)
+  - getStaticProps (SSG)
+  - API routes
 
 ### Criar o projeto com o comando:
 
