@@ -83,3 +83,35 @@ Para a grande maioria dos casos não existe melhor método de sutenticação do 
 Facilita a criação de apps serverless por nao precisar manter uma conexao ativa com o banco de dados.
 
 `yarn add faunadb`
+
+### JAMStack
+Conceito que implica criar um app frontend completo sem necessariamente depender de um backend.
+
+Javascript API Markup
+
+### CMS (Content Management System)
+Projetos em que há um painel de administração pronto para gerir conteúdo.
+Como:
+- Wordpress
+x Drupal
+x Joomla
+x Magento (E-commerce)
+
+Headless CMS (Painel de Administração + API HTTP), nesse tipo não há um lugar padrão para mostrar o conteúdo, eles são fornecidos via API, mas com um painel de ADM ainda existente.
+Como:
+- Strapi
+- Ghost (Blog)
+- Keystone
+  
+- GraphCMS
+- Prismic CMS - Escolhido
+- Contentful
+  
+- Shopify (E-commerce)
+- Saleor (E-commerce)
+
+Para instaalr o cliente do prismic:
+`yarn add @prismicio/client@^4`
+
+Formatador do prismic para HTML:
+`yarn add prismic-dom`
