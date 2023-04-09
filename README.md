@@ -24,6 +24,7 @@ Como o Next.js entrega a página pronta para o broser, com todo o conteúdo já 
   - getStaticProps (SSG)
   - API routes
 - Utilizar ancoras com a rota para a pagina simplesmente é extremamente ineficiente pois faz com que o mecanismo de reaproveitamento de componentes do React seja ignorado e todos os componentes da pagina sejam servidos novamente pelo Next(SSR). Para evitar isso deve-se utlizar a tag Link do NextJS. Assim algo como `<a href="/">Home</a>` fica `<Link href="/" ><a className={styles.active}>Home</a></Link>`
+- Para páginas estáticas com parametro, como [slug].tsx, é necessário exportar o `getStaticPaths` para indicar quais slugs devem ser geradas estaticamente no momento da build. Caso nenhum path seja passado nessa função, as páginas estáticas serão geradas somente no momento do primeiro acesso. Para essa conf existem ainda 3 tipos de fallbacks, que indicam qual o comportamento se o pagina estatica ainda não existir: caso true, a pagina vai ser gerada do lado do browser, caso false simplesmente retorna 404 e caso bloccking a pagina é montada usando SSR.
 
 ### Criar o projeto com o comando:
 
